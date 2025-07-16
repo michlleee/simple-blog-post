@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<h2>Home Page</h2>
+<h3>Blog Posts</h3>
+
+<%if(blogPosts.length > 0){%>
+    <%blogPosts.forEach(blog => {%>
+        <p>user <%= blog.id %>: <%= blog.name %></p>
+        <p>content: <%= blog.content %></p>
+        <a href="/post/<%= blog.id %>/edit"><button>Edit</button></a>
+        
+        <form action="/post/<%= blog.id %>/delete" method="POST" style="display:inline;">
+            <button>Delete</button>
+        </form>
+    </br>
+    <%}); %>
+<%}else{%>
+    <h3>No blog Posts available!</h3>
+<%}%>
+<%- include("partials/footer.ejs") %>
