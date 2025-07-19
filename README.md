@@ -52,7 +52,7 @@ Blog Post/
 1. Clone this repo:
 
    ```bash
-   git clone https://github.com/your-username/blog-post-app.git
+   git clone https://github.com/michlleee/blog-post-app.git
    cd blog-post-app
    ```
 
